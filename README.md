@@ -64,7 +64,13 @@ char* read_from_file(const char* ptr) {
 }
 
 ```
+## Installing Guide
+
+Вы можете найти это расширение самостоятельно по его названию в официальном магазине для VS Code 
+
 ## Release Notes
+
+7a1e911 Rewrite README.md and delete generated files
 
 99db983 Small refactoring, delete two register calls
 
