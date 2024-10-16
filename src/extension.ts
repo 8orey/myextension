@@ -55,6 +55,15 @@ export function activate(context: vscode.ExtensionContext) {
     },
   );
 
+  const shortcut1 = vscode.commands.registerCommand(
+    "myextension.wrapSelectionInFunctionShortcut",
+    () => {
+      vscode.commands.executeCommand("myextension.wrapSelectionInFunction");
+    },
+  );
+
+  context.subscriptions.push(function1, shortcut1);
+  
   const function2 = vscode.commands.registerCommand(
     "myextension.wrapSelectionInConstant",
     () => {
@@ -69,14 +78,6 @@ export function activate(context: vscode.ExtensionContext) {
     },
   );
 
-  // Register the keyboard shortcut
-  const shortcut1 = vscode.commands.registerCommand(
-    "myextension.wrapSelectionInFunctionShortcut",
-    () => {
-      vscode.commands.executeCommand("myextension.wrapSelectionInFunction");
-    },
-  );
-
   const shortcut2 = vscode.commands.registerCommand(
     "myextension.wrapSelectionInConstantShortcut",
     () => {
@@ -84,23 +85,7 @@ export function activate(context: vscode.ExtensionContext) {
     },
   );
 
-  context.subscriptions.push(function1, shortcut1);
   context.subscriptions.push(function2, shortcut2);
-
-  // Register the keyboard shortcut (e.g., Ctrl+Shift+F)
-  vscode.commands.registerCommand(
-    "myextension.wrapSelectionInFunctionShortcut",
-    () => {
-      vscode.commands.executeCommand("myextension.wrapSelectionInFunction");
-    },
-  );
-
-  vscode.commands.registerCommand(
-    "myextension.wrapSelectionInConstantShortcut",
-    () => {
-      vscode.commands.executeCommand("myextension.wrapSelectionInConstant");
-    },
-  );
 }
 
 export function deactivate() {}
