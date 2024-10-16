@@ -66,9 +66,11 @@ char* read_from_file(const char* ptr) {
 ```
 ## Installing Guide
 
-Вы можете найти это расширение самостоятельно по его названию в официальном магазине для VS Code 
+Установочный файл лежит в репозитории с названием myextension-0.0.1.vsix
 
 ## Release Notes
+
+405ecc9 Add installing guide
 
 7a1e911 Rewrite README.md and delete generated files
 
